@@ -1,0 +1,40 @@
+<div class="contenedor-principal">
+  <h1>🌌 Explorador del Multiverso</h1>
+
+  <div class="buscador-container">
+    <input 
+      type="text" 
+      placeholder="🔍 Busca un personaje..." 
+      (input)="buscar($event)"
+    >
+  </div>
+
+  <div class="grid-personajes">
+    <div class="tarjeta" *ngFor="let p of personajesFiltrados" (click)="verDetalles(p)">
+      <img [src]="p.image" alt="{{ p.name }}">
+      <div class="info">
+        <h3>{{ p.name }}</h3>
+        <p>Especie: {{ p.species }}</p>
+        <span class="estado" [ngClass]="p.status">
+          ● {{ p.status }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="overlay" *ngIf="personajeSeleccionado" (click)="cerrarModal()">
+  
+  <div class="modal" (click)="$event.stopPropagation()">
+    <button class="boton-cerrar" (click)="cerrarModal()">X</button>
+    
+    <img [src]="personajeSeleccionado.image">
+    <h2>{{ personajeSeleccionado.name }}</h2>
+    <hr>
+    <p><strong>Origen:</strong> {{ personajeSeleccionado.origin.name }}</p>
+    <p><strong>Ubicación actual:</strong> {{ personajeSeleccionado.location.name }}</p>
+    <p><strong>Apariciones:</strong> {{ personajeSeleccionado.episode.length }} episodios</p>
+  </div>
+</div>
