@@ -16,6 +16,7 @@ Estilos: CSS3 / Flexbox
 
 
 Características principales
+
 Renderizado dinámico de personajes.
 
 Consumo de API en tiempo real.
