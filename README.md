@@ -1,6 +1,23 @@
 # RickMortyApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+Rick & Morty Multiverse Explorer 🚀
+
+Descripción
+Aplicación web desarrollada en Angular que consume la API oficial de Rick and Morty para visualizar y filtrar los personajes de la serie. Este proyecto demuestra el manejo de peticiones asíncronas, servicios y diseño de interfaces responsivas.
+
+Tecnologías utilizadas
+Frontend: Angular 21 (TypeScript)
+
+Consumo de Datos: REST API (HttpClient)
+
+Estilos: CSS3 / Flexbox
+
+Características principales
+Renderizado dinámico de personajes.
+
+Consumo de API en tiempo real.
+
+Estructura modular y escalable.
 
 ## Development server
 
